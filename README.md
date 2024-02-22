@@ -65,8 +65,35 @@ CIRCUIT DIAGRAM
 9.	Ensure safety before powering up the device 
 
 
+**PROGRAM** int led=4;
+int sensorpot;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
 
-**PROGRAM** 
+void loop()
+{
+  sensorpot=analogRead(A0);
+  //Serial.print("data=");
+  Serial.println(sensorpot);
+  delay(500);
+  if(sensorpot>500)
+  {
+    digitalWrite(led,HIGH);
+      delay(100);
+    digitalWrite(led,LOW);
+      delay(100);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(100);
+  }
+    
+}
+
  
 
 
@@ -78,7 +105,8 @@ CIRCUIT DIAGRAM
 
 
 **
-**Simulation output:** 
+**Simulation output:** C:\Users\besth\OneDrive\Pictures\Screenshots\Screenshot 2024-02-22 114401.png[poorna sai.pdf](https://github.com/vasanthkumarch/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/files/14374145/poorna.sai.pdf)
+
 **
 
 
