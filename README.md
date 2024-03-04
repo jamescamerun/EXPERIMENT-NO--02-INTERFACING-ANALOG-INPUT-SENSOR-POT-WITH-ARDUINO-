@@ -1,8 +1,8 @@
- ###  DATE: 
+ ###  DATE: 4/3/2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Bestha naresh
+###  ROLL NO :212221080012
+###  DEPARTMENT: mechanical engineering
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
@@ -44,7 +44,7 @@ A potentiometer, informally a pot, is a three-terminal resistor with a sliding o
 Potentiometers are commonly used to control electrical devices such as volume controls on audio equipment. Potentiometers operated by a mechanism can be used as position transducers, for example, in a joystick. Potentiometers are rarely used to directly control significant power (more than a watt), since the power dissipated in the potentiometer would be comparable to the power in the controlled load
 CIRCUIT DIAGRAM
 
-
+"C:\Users\besth\Downloads\bestha naresh 212221080012 (1).pdf"
 
 
 
@@ -67,7 +67,34 @@ CIRCUIT DIAGRAM
 
 
 
-**PROGRAM** 
+**PROGRAM** int led=4;
+int sensorpot;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  sensorpot=analogRead(A0);
+  Serial.print("data=");
+  Serial.println(sensorpot);
+  delay(500);
+  if(sensorpot>500)
+  {
+    digitalWrite(led,HIGH);
+      delay(100);
+    digitalWrite(led,LOW);
+      delay(100);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(100);
+  }
+    
+}
  
 
 
@@ -80,7 +107,7 @@ CIRCUIT DIAGRAM
 
 **
 **Simulation output:** 
-**
+**"C:\Users\besth\OneDrive\Pictures\Screenshots\Screenshot 2024-02-22 182828.png"
 
 
 [My image](username.github.com/repository/img/image.jpg)
